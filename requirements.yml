@@ -1,0 +1,5 @@
+---
+# Ansible collections required for the playbooks in this course
+collections:
+- ansible.posix
+- community.docker
