@@ -13,3 +13,8 @@ variable "key_name" {
   type        = string
   default = "gnasri"
 }
+variable "create_ldap" {
+  description = "switch indicating wether to create ldap"
+  type        = bool
+  default = "true"
+}

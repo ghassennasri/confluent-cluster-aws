@@ -133,6 +133,38 @@ locals {
     }
   }
 }
+module "ldap_server" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  version = "~> 3.0"
+
+  name = "ldap_server"
+  count = var.create_ldap?1:0
+  ami                    = data.aws_ami.centos7_linux.id
+  instance_type          = "t3.large"
+  availability_zone      = element(module.vpc.azs, 2)
+  subnet_id              = element(module.vpc.public_subnets, 2)
+  vpc_security_group_ids = [module.security_group_ldap.security_group_id]
+   root_block_device = [
+    {
+      encrypted   = true
+      volume_type = "gp3"
+      throughput  = 200
+      volume_size = 10
+      tags = {
+        Name = "ldap_server-root-block"
+      }
+    }
+  ]
+  enable_volume_tags = false
+  #user_data_base64 = base64encode("${file("./user-data.sh")}")
+  key_name = data.aws_key_pair.my-key.key_name
+  tags = {
+    Owner       = "confluent user"
+    Environment = "staging"
+    Name        = "ldap"
+  }
+  
+}
 module "schema_regitry" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
@@ -353,6 +385,38 @@ module "vpc" {
   create_flow_log_cloudwatch_log_group = true
   create_flow_log_cloudwatch_iam_role  = true
   flow_log_max_aggregation_interval    = 60
+
+  tags = local.tags
+}
+module "security_group_ldap"{
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "~> 4.0"
+
+  name        = local.name
+  description = "Security group for ldap server"
+  vpc_id      = module.vpc.vpc_id
+
+  ingress_cidr_blocks = ["${data.external.myipaddr.result.ip}/32","0.0.0.0/32"]
+  ingress_rules       = ["ssh-tcp","ldap-tcp","ldaps-tcp"]
+         
+    ingress_with_cidr_blocks = [
+       {
+      from_port   = 389
+      to_port     = 389
+      protocol    = "tcp"
+      description = "ldap"
+      cidr_blocks = "20.10.0.0/16"
+    },
+    {
+      from_port   = 636
+      to_port     = 636
+      protocol    = "tcp"
+      description = "ldaps"
+      cidr_blocks = "20.10.0.0/16"
+    }
+  ]
+  egress_rules        = ["all-all"]
+   
 
   tags = local.tags
 }
@@ -675,6 +739,17 @@ data "aws_ami" "ubuntu_linux" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20220610"]
   }
 }
+data "aws_ami" "centos7_linux" {
+  most_recent = true
+  owners =[ "125523088429"]
+  
+
+  filter {
+    name   = "name"
+    values = ["CentOS 7.9.2009 x86_64"]
+  }
+}
+
 resource "random_shuffle" "az" {
   input        = ["eu-west-3a", "eu-west-3c", "eu-west-3b"]
   result_count = 1

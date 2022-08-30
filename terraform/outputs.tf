@@ -9,16 +9,21 @@ output "kafka" {
 output "resource-ids" {
   value = <<-EOT
 all:
- vars:
-  ansible_connection: ssh
-  ansible_user: ubuntu
-  ansible_become: true
-  ansible_ssh_private_key_file: ~/.ssh/id_rsa
-  validate_hosts: false
-  confluent_common_repository_debian_release_version: focal
-  #Enable JMX Exporter
-  jmxexporter_enabled: true
-  env: aws
+  vars:
+    ansible_connection: ssh
+    ansible_user: ubuntu
+    ansible_become: true
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    validate_hosts: false
+    confluent_common_repository_debian_release_version: focal
+    #Enable JMX Exporter
+    jmxexporter_enabled: true
+    env: aws
+ldap_server:
+  hosts:  
+    ${one(module.ldap_server[*].private_dns)}:
+      ansible_host: ${one(module.ldap_server[*].public_dns)}
+      ansible_user: centos
 zookeeper:
   hosts:
     ${values(module.zookeeper)[0].private_dns}:
@@ -35,12 +40,12 @@ kafka_broker:
         broker.rack: eu-west-3a
     ${values(module.kafka)[1].private_dns}:
       ansible_host: ${values(module.kafka)[1].public_dns}
-        kafka_broker_custom_properties:
-          broker.rack: eu-west-3b
+      kafka_broker_custom_properties:
+        broker.rack: eu-west-3b
     ${values(module.kafka)[2].private_dns}:
       ansible_host: ${values(module.kafka)[2].public_dns}
-        kafka_broker_custom_properties:
-          broker.rack: eu-west-3c
+      kafka_broker_custom_properties:
+        broker.rack: eu-west-3c
 schema_registry:
   hosts:
     ${module.schema_regitry.private_dns}:
