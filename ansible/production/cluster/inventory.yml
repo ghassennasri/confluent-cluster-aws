@@ -1,0 +1,60 @@
+all:
+  vars:
+    ansible_connection: ssh
+    ansible_user: ubuntu
+    ansible_become: true
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    validate_hosts: false
+    confluent_common_repository_debian_release_version: focal
+    #Enable JMX Exporter
+    jmxexporter_enabled: true
+    env: aws
+ldap_server:
+  hosts:  
+    ip-20-10-3-113.eu-west-3.compute.internal:
+      ansible_host: ec2-13-37-213-157.eu-west-3.compute.amazonaws.com
+      ansible_user: centos
+zookeeper:
+  hosts:
+    ip-20-10-1-19.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-71-7.eu-west-3.compute.amazonaws.com
+    ip-20-10-2-150.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-4-63.eu-west-3.compute.amazonaws.com
+    ip-20-10-3-177.eu-west-3.compute.internal:
+      ansible_host: ec2-35-181-53-181.eu-west-3.compute.amazonaws.com
+kafka_broker:
+  hosts:
+    ip-20-10-1-34.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-107-253.eu-west-3.compute.amazonaws.com
+      kafka_broker_custom_properties:
+        broker.rack: eu-west-3a
+    ip-20-10-2-121.eu-west-3.compute.internal:
+      ansible_host: ec2-15-237-94-80.eu-west-3.compute.amazonaws.com
+      kafka_broker_custom_properties:
+        broker.rack: eu-west-3b
+    ip-20-10-3-251.eu-west-3.compute.internal:
+      ansible_host: ec2-13-39-23-183.eu-west-3.compute.amazonaws.com
+      kafka_broker_custom_properties:
+        broker.rack: eu-west-3c
+schema_registry:
+  hosts:
+    ip-20-10-2-183.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-50-121.eu-west-3.compute.amazonaws.com
+kafka_rest:
+  hosts:
+    ip-20-10-2-57.eu-west-3.compute.internal:
+      ansible_host: ec2-35-180-26-206.eu-west-3.compute.amazonaws.com
+ksql:
+  hosts:
+    ip-20-10-2-201.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-4-217.eu-west-3.compute.amazonaws.com
+    ip-20-10-2-240.eu-west-3.compute.internal:
+      ansible_host: ec2-35-180-211-165.eu-west-3.compute.amazonaws.com
+kafka_connect:
+  hosts:
+    ip-20-10-2-5.eu-west-3.compute.internal:
+      ansible_host: ec2-35-180-28-11.eu-west-3.compute.amazonaws.com
+control_center:
+  hosts:
+    ip-20-10-2-141.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-48-149.eu-west-3.compute.amazonaws.com

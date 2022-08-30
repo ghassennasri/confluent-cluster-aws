@@ -1,0 +1,36 @@
+---
+# code based on activity in the Confluent Ansible playbook offcial training
+# First run playbook {{ inventory_dir }}/../certs/cert-playbook.yml
+#   to generate certificates
+ssl_enabled: true
+ssl_custom_certs: true
+ssl_ca_cert_filepath: "{{ inventory_dir }}/../certs/generated_ssl_files/ca.crt"
+ssl_signed_cert_filepath: "{{ inventory_dir }}/../certs/generated_ssl_files/{{inventory_hostname}}-ca1-signed.crt"
+ssl_key_filepath: "{{ inventory_dir }}/../certs/generated_ssl_files/{{inventory_hostname}}-key.pem"
+ssl_key_password: "{{ vault_ssl_key_password }}"
+
+# For demonstration purposes, we use the same truststore password
+#   an keystore password for each component.
+zookeeper_truststore_storepass: "{{ vault_confluent_truststore_password }}"
+zookeeper_keystore_storepass: "{{ vault_confluent_keystore_password }}"
+zookeeper_keystore_keypass: "{{ vault_confluent_keystore_password }}"
+
+kafka_broker_truststore_storepass: "{{ vault_confluent_truststore_password }}"
+kafka_broker_keystore_storepass: "{{ vault_confluent_keystore_password }}"
+kafka_broker_keystore_keypass: "{{ vault_confluent_keystore_password }}"
+
+schema_registry_truststore_storepass: "{{ vault_confluent_truststore_password }}"
+schema_registry_keystore_storepass: "{{ vault_confluent_keystore_password }}"
+schema_registry_keystore_keypass: "{{ vault_confluent_keystore_password }}"
+
+kafka_connect_truststore_storepass: "{{ vault_confluent_truststore_password }}"
+kafka_connect_keystore_storepass: "{{ vault_confluent_keystore_password }}"
+kafka_connect_keystore_keypass: "{{ vault_confluent_keystore_password }}"
+
+ksql_truststore_storepass: "{{ vault_confluent_truststore_password }}"
+ksql_keystore_storepass: "{{ vault_confluent_keystore_password }}"
+ksql_keystore_keypass: "{{ vault_confluent_keystore_password }}"
+
+control_center_truststore_storepass: "{{ vault_confluent_truststore_password }}"
+control_center_keystore_storepass: "{{ vault_confluent_keystore_password }}"
+control_center_keystore_keypass: "{{ vault_confluent_keystore_password }}"

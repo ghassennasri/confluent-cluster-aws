@@ -1,0 +1,31 @@
+kafka_broker_custom_listeners:
+  client:
+    name: CLIENT
+    port: 9093
+    ssl_enabed: true
+    sasl_protocol: plain
+
+kafka_broker_configure_control_plane_listener: true
+
+kafka_broker_custom_properties:
+  # enable self balancing clusters!
+  confluent.balancer.enable: "true"
+  # Lowered from production default of 168 for demonstration purposes
+  log.retention.hours: 1
+  # Lowered from production default of unlimited (-1) for demonstration purposes
+  log.retention.bytes: 1000000000
+  # Lowered from production default of 1 GiB for demonstration purposes
+  log.segment.bytes: 100000000
+
+kafka_broker_service_environment_overrides:
+  # The Java heap memory is lowered from production default 6GB for demonstration purposes.
+  KAFKA_HEAP_OPTS: "-Xms1g -Xmx2g -XX:MetaspaceSize=96m -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:G1HeapRegionSize=16M -XX:MinMetaspaceFreeRatio=50 -XX:MaxMetaspaceFreeRatio=80"
+
+kafka_connect_plugins_path:
+  - /usr/share/java
+  - /usr/share/confluent-hub-components
+
+kafka_connect_confluent_hub_plugins:
+  - confluentinc/kafka-connect-datagen:0.5.3
+
+redhat_java_package_name: java-11-openjdk

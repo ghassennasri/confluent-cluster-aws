@@ -1,0 +1,6 @@
+---
+- name: Provision OpenLDAP Server and Create Users
+  hosts: ldap_server
+  tasks:
+    - import_role:
+        name: ~/.ansible/collections/ansible_collections/confluent/platform/test_roles/confluent.test.ldap
