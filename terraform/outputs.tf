@@ -19,33 +19,27 @@ all:
     #Enable JMX Exporter
     jmxexporter_enabled: true
     env: aws
+%{ for l in module.ldap_server }
 ldap_server:
   hosts:  
     ${one(module.ldap_server[*].private_dns)}:
       ansible_host: ${one(module.ldap_server[*].public_dns)}
       ansible_user: centos
+%{ endfor }
 zookeeper:
   hosts:
-    ${values(module.zookeeper)[0].private_dns}:
-      ansible_host: ${values(module.zookeeper)[0].public_dns}
-    ${values(module.zookeeper)[1].private_dns}:
-      ansible_host: ${values(module.zookeeper)[1].public_dns}
-    ${values(module.zookeeper)[2].private_dns}:
-      ansible_host: ${values(module.zookeeper)[2].public_dns}
+    %{ for z in values(module.zookeeper) }
+    ${z.private_dns}:
+      ansible_host: ${z.public_dns}
+    %{ endfor }
 kafka_broker:
   hosts:
-    ${values(module.kafka)[0].private_dns}:
-      ansible_host: ${values(module.kafka)[0].public_dns}
+    %{for k in values(module.kafka) }
+    ${k.private_dns}:
+      ansible_host: ${k.public_dns}
       kafka_broker_custom_properties:
-        broker.rack: eu-west-3a
-    ${values(module.kafka)[1].private_dns}:
-      ansible_host: ${values(module.kafka)[1].public_dns}
-      kafka_broker_custom_properties:
-        broker.rack: eu-west-3b
-    ${values(module.kafka)[2].private_dns}:
-      ansible_host: ${values(module.kafka)[2].public_dns}
-      kafka_broker_custom_properties:
-        broker.rack: eu-west-3c
+        broker.rack: ${format("%s%x",var.region,index(values(module.kafka),k)+10)}
+    %{ endfor }
 schema_registry:
   hosts:
     ${module.schema_regitry.private_dns}:
@@ -56,10 +50,10 @@ kafka_rest:
       ansible_host: ${module.kafka_rest.public_dns}
 ksql:
   hosts:
-    ${values(module.ksql)[0].private_dns}:
-      ansible_host: ${values(module.ksql)[0].public_dns}
-    ${values(module.ksql)[1].private_dns}:
-      ansible_host: ${values(module.ksql)[1].public_dns}
+    %{ for k in module.ksql }
+    ${k.private_dns}:
+      ansible_host: ${k.public_dns}
+      %{ endfor }
 kafka_connect:
   hosts:
     ${module.kafka_connect.private_dns}:
@@ -68,7 +62,5 @@ control_center:
   hosts:
     ${module.control_center.private_dns}:
       ansible_host: ${module.control_center.public_dns}
- EOT
-
-  #sensitive = true
+    EOT
 }

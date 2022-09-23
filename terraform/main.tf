@@ -3,68 +3,45 @@ provider "aws" {
 }
 
 locals {
+  vpc_cidr= "${lookup(var.vpc_cidr, var.environment)}.0.0/16"
   name   = "staging-kafka"
-  region = "eu-west-3"
+  region = var.region
   tags = {
     Owner       = "confluent user"
     Environment = "staging"
     Name        = "staging-kafka"
   }
-  zookeeper_ensemble = {
-    zk-1 = {
+  zookeeper_ensemble = [
+    for i in range(0, var.zcardinality) :
+    {
+      instance_name="zk-${i}"
       instance_type     = "t3.large"
-      availability_zone = element(module.vpc.azs, 0)
-      subnet_id         = element(module.vpc.public_subnets, 0)
+      availability_zone = element(module.vpc.azs, i)
+      subnet_id         = element(module.vpc.public_subnets, i)
       root_block_device = [
         {
           volume_type = "gp2"
           delete_on_termination = false
           tags = {
-            Name = "zk-1"
+            Name = "zk-${i}"
           }
         }
       ]
     }
-    zk-2 = {
+  ]
+    kafka_cluster = [
+    for i in range(0, var.kcardinality) :
+    {
+      instance_name="kafka-${i}"
       instance_type     = "t3.large"
-      availability_zone = element(module.vpc.azs, 1)
-      subnet_id         = element(module.vpc.public_subnets, 1)
+      availability_zone = element(module.vpc.azs, i)
+      subnet_id         = element(module.vpc.public_subnets, i)
       root_block_device = [
         {
           volume_type = "gp2"
           delete_on_termination = false
           tags = {
-            Name = "zk-2"
-          }
-        }
-      ]
-    }
-    zk-3 = {
-      instance_type     = "t3.large"
-      availability_zone = element(module.vpc.azs, 2)
-      subnet_id         = element(module.vpc.public_subnets, 2)
-      root_block_device = [
-        {
-          volume_type = "gp2"
-          delete_on_termination = false
-          tags = {
-            Name = "zk-3"
-          }
-        }
-      ]
-    }
-  }
-    kafka_cluster = {
-    kafka-1 = {
-      instance_type     = "t3.large"
-      availability_zone = element(module.vpc.azs, 0)
-      subnet_id         = element(module.vpc.public_subnets, 0)
-      root_block_device = [
-        {
-          volume_type = "gp2"
-          delete_on_termination = false
-          tags = {
-            Name = "kafka-1"
+            Name = "kafka-${i}"
           }
         }
       ]
@@ -74,65 +51,15 @@ locals {
           delete_on_termination = false
           device_name = "/data/kafka"
           tags = {
-            Name = "kafka-1-data"
+            Name = "kafka-${i}-data"
             volume_size=20
           }
         }
       ]
     }
-    kafka-2 = {
-      instance_type     = "t3.large"
-      availability_zone = element(module.vpc.azs, 1)
-      subnet_id         = element(module.vpc.public_subnets, 1)
-      root_block_device = [
-        {
-          
-          volume_type = "gp2"
-          delete_on_termination = false
-          tags = {
-            Name = "kafka-2"
-          }
-        }
-      ]
-       ebs_block_device=[
-        {
-          device_name = "/data/kafka"
-          volume_type = "gp2"
-          delete_on_termination = false
-          tags = {
-            Name = "kafka-2-data"
-            volume_size=20
-          }
-        }
-      ]
-    }
-    kafka-3 = {
-      instance_type     = "t3.large"
-      availability_zone = element(module.vpc.azs, 2)
-      subnet_id         = element(module.vpc.public_subnets, 2)
-      root_block_device = [
-        {
-          volume_type = "gp2"
-          delete_on_termination = false
-          tags = {
-            Name = "kafka-3"
-          }
-        }
-      ]
-       ebs_block_device=[
-        {
-          volume_type = "gp2"
-          delete_on_termination = false
-          device_name = "/data/kafka"
-          tags = {
-            Name = "kafka-3-data"
-            volume_size=20
-          }
-        }
-      ]
-    }
-  }
+  ]
 }
+   
 module "ldap_server" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
@@ -224,15 +151,15 @@ module "ksql" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
- for_each = toset(["1", "2"])
+ count=var.cksql
 
-  name = "ksql-${each.key}"
+  name = "ksql-${count.index}"
 
 
   ami                    = data.aws_ami.ubuntu_linux.id
   instance_type          = "t3.large"
-  availability_zone      = element(module.vpc.azs, 1)
-  subnet_id              = element(module.vpc.public_subnets, 1)
+  availability_zone      = element(module.vpc.azs, count.index)
+  subnet_id              = element(module.vpc.public_subnets, count.index)
   vpc_security_group_ids = [module.security_group_ksql.security_group_id]
 
   enable_volume_tags = false
@@ -243,7 +170,7 @@ module "ksql" {
       throughput  = 200
       volume_size = 10
       tags = {
-        Name = "ksql-root-block"
+        Name = "ksql-${count.index}-root-block"
       }
     }
   ]
@@ -279,7 +206,7 @@ module "kafka_connect" {
 module "control_center" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
-  name = "kafka_connect"
+  name = "control_center"
   ami                    = data.aws_ami.ubuntu_linux.id
   instance_type          = "t3.large"
   availability_zone      = element(module.vpc.azs, 1)
@@ -292,7 +219,7 @@ module "control_center" {
   tags = {
     Owner       = "confluent user"
     Environment = "staging"
-    Name        = "kafka_connect"
+    Name        = "control_center"
   }
   
 }
@@ -300,9 +227,9 @@ module "kafka" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  for_each = local.kafka_cluster
+  for_each = {for broker in local.kafka_cluster: broker.instance_name =>  broker}
 
-  name = "${each.key}"
+  name = "${each.value.instance_name}"
 
   ami                    = data.aws_ami.ubuntu_linux.id
   instance_type          = each.value.instance_type
@@ -324,10 +251,9 @@ module "kafka" {
 module "zookeeper" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
+  for_each = {for node in local.zookeeper_ensemble: node.instance_name =>  node}
 
-  for_each = local.zookeeper_ensemble
-
-  name = "${each.key}"
+  name = "${each.value.instance_name}"
 
   ami                    = data.aws_ami.ubuntu_linux.id
   instance_type          = each.value.instance_type
@@ -356,13 +282,15 @@ module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = local.name
-  cidr = "20.10.0.0/16" # 10.0.0.0/8 is reserved for EC2-Classic
+  #cidr = "20.10.0.0/16" # 10.0.0.0/8 is reserved for EC2-Classic
 
   azs             = ["${local.region}a", "${local.region}b", "${local.region}c"]
-  public_subnets  = ["20.10.1.0/24", "20.10.2.0/24", "20.10.3.0/24"]
-  private_subnets = ["20.10.4.0/24", "20.10.5.0/24", "20.10.6.0/24"]
-
-
+  #public_subnets  = ["20.10.1.0/24", "20.10.2.0/24", "20.10.3.0/24"]
+  #private_subnets = ["20.10.4.0/24", "20.10.5.0/24", "20.10.6.0/24"]
+  cidr                 = local.vpc_cidr
+  private_subnets      = local.private_subnets
+  public_subnets       = local.public_subnets
+  
   manage_default_network_acl = true
   default_network_acl_tags   = { Name = "${local.name}-default" }
 
@@ -405,14 +333,14 @@ module "security_group_ldap"{
       to_port     = 389
       protocol    = "tcp"
       description = "ldap"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 636
       to_port     = 636
       protocol    = "tcp"
       description = "ldaps"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     }
   ]
   egress_rules        = ["all-all"]
@@ -437,42 +365,42 @@ module "security_group_kafka" {
       to_port     = 9091
       protocol    = "tcp"
       description = "Inter-broker listener"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 9092
       to_port     = 9092
       protocol    = "tcp"
       description = "kafka default external plaintext listener"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 8090
       to_port     = 8090
       protocol    = "tcp"
       description = "Metadata Service (MDS)/Confluent Server REST API"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 9094
       to_port     = 9094
       protocol    = "tcp"
       description = "kafka TLS listener"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
      {
       from_port   = 11001
       to_port     = 11001
       protocol    = "tcp"
       description = "kafka JMX exporter"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 11002
       to_port     = 11002
       protocol    = "tcp"
       description = "kafka JMX exporter"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     }
   ]
   egress_rules        = ["all-all"]
@@ -497,7 +425,7 @@ module "security_group_schema_registry" {
       to_port     = 8081
       protocol    = "tcp"
       description = "schema registry REST API"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 8081
@@ -511,14 +439,14 @@ module "security_group_schema_registry" {
       to_port     = 2888
       protocol    = "tcp"
       description = "zookeeper-2888-tcp"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
      {
       from_port   = 7772
       to_port     = 7772
       protocol    = "tcp"
       description = "Jolokia"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     }
   ]
   egress_rules        = ["all-all"]
@@ -543,7 +471,7 @@ module "security_group_kafka_rest" {
       to_port     = 8082
       protocol    = "tcp"
       description = "REST Proxy"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 8081
@@ -575,7 +503,7 @@ module "security_group_ksql" {
       to_port     = 8088
       protocol    = "tcp"
       description = "REST API"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 8088
@@ -589,7 +517,7 @@ module "security_group_ksql" {
       to_port     = 7774
       protocol    = "tcp"
       description = "Jolokia"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     }
   ]
   egress_rules        = ["all-all"]
@@ -614,7 +542,7 @@ module "security_group_kafka_connect" {
       to_port     = 8083
       protocol    = "tcp"
       description = "REST API"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 8083
@@ -628,7 +556,7 @@ module "security_group_kafka_connect" {
       to_port     = 7773
       protocol    = "tcp"
       description = "Jolokia"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     }
   ]
   egress_rules        = ["all-all"]
@@ -653,7 +581,7 @@ module "security_group_control_center" {
       to_port     = 9021
       protocol    = "tcp"
       description = "REST API"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 9021
@@ -685,42 +613,42 @@ module "security_group_zookeeper" {
       to_port     = 2181
       protocol    = "tcp"
       description = "zookeeper console"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 2182
       to_port     = 2182
       protocol    = "tcp"
       description = "Client access via TLS"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 2888
       to_port     = 2888
       protocol    = "tcp"
       description = "zookeeper-2888-tcp"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
      {
       from_port   = 3888
       to_port     = 3888
       protocol    = "tcp"
       description = "zookeeper console"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 7199
       to_port     = 7199
       protocol    = "tcp"
       description = "zookeeper JMX"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     },
     {
       from_port   = 7770
       to_port     = 7770
       protocol    = "tcp"
       description = "Jolokia"
-      cidr_blocks = "20.10.0.0/16"
+      cidr_blocks = local.vpc_cidr
     }
   ]
   egress_rules        = ["all-all"]

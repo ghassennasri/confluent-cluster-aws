@@ -1,6 +1,7 @@
 #!/bin/bash
 PROJECT_DIR=$(pwd)
 create_unsecure_cluster(){
+export ANSIBLE_CONFIG=$PROJECT_DIR/ansible.cfg
 cd $PROJECT_DIR/terraform
 terraform plan -no-color > aws_resources.txt
 terraform apply --auto-approve
@@ -21,6 +22,7 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 ansible-playbook   $CP_ANSIBLE_PATH/playbooks/all.yml   -i $PROJECT_DIR/ansible/unsecure/aws_inventory.yml
 }
 create_secure_cluster(){
+export ANSIBLE_CONFIG=$PROJECT_DIR/ansible.cfg
 cd $PROJECT_DIR/terraform
 terraform plan -no-color > aws_resources.txt
 terraform apply --auto-approve
