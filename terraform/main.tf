@@ -324,7 +324,7 @@ module "security_group_ldap"{
   description = "Security group for ldap server"
   vpc_id      = module.vpc.vpc_id
 
-  ingress_cidr_blocks = ["${data.external.myipaddr.result.ip}/32","0.0.0.0/32"]
+  ingress_cidr_blocks = ["${data.external.myipaddr.result.ip}/32","0.0.0.0/0"]
   ingress_rules       = ["ssh-tcp","ldap-tcp","ldaps-tcp"]
          
     ingress_with_cidr_blocks = [
@@ -356,7 +356,7 @@ module "security_group_kafka" {
   description = "Security group for example usage with EC2 instance"
   vpc_id      = module.vpc.vpc_id
 
-  ingress_cidr_blocks = ["${data.external.myipaddr.result.ip}/32","0.0.0.0/32"]
+  ingress_cidr_blocks = ["${data.external.myipaddr.result.ip}/32","0.0.0.0/0"]
   ingress_rules       = ["ssh-tcp","kafka-broker-tcp","kafka-broker-tls-tcp","kafka-jmx-exporter-tcp"]
          
     ingress_with_cidr_blocks = [

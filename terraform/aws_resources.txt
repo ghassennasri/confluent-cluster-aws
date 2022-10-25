@@ -1,428 +1,2753 @@
 data.external.myipaddr: Reading...
-random_shuffle.az: Refreshing state... [id=-]
 data.external.myipaddr: Read complete after 0s [id=-]
-data.aws_ami.ubuntu_linux: Reading...
 data.aws_key_pair.my-key: Reading...
 module.vpc.data.aws_iam_policy_document.flow_log_cloudwatch_assume_role[0]: Reading...
-module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-035302a7c2cce5fa8]
-module.vpc.data.aws_iam_policy_document.flow_log_cloudwatch_assume_role[0]: Read complete after 0s [id=1021377347]
 data.aws_ami.centos7_linux: Reading...
 module.vpc.data.aws_iam_policy_document.vpc_flow_log_cloudwatch[0]: Reading...
-module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0005d342cd992b30f]
+data.aws_ami.ubuntu_linux: Reading...
 module.vpc.data.aws_iam_policy_document.vpc_flow_log_cloudwatch[0]: Read complete after 0s [id=2053943846]
-module.vpc.aws_iam_role.vpc_flow_log_cloudwatch[0]: Refreshing state... [id=vpc-flow-log-role-20220923144713809700000002]
-module.vpc.aws_iam_policy.vpc_flow_log_cloudwatch[0]: Refreshing state... [id=arn:aws:iam::995646271469:policy/vpc-flow-log-to-cloudwatch-20220923144713808100000001]
+module.vpc.data.aws_iam_policy_document.flow_log_cloudwatch_assume_role[0]: Read complete after 0s [id=1021377347]
 data.aws_key_pair.my-key: Read complete after 0s [id=key-0b7b9810319315d5c]
 data.aws_ami.centos7_linux: Read complete after 0s [id=ami-072ec828dae86abe5]
 data.aws_ami.ubuntu_linux: Read complete after 0s [id=ami-0f7559f51d3a22167]
-module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-00177921c4b1b1ff5]
-module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-0845fdbd89fae0eac]
-module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-033522c67541bab80]
-module.security_group_control_center.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-083b3d01990a9f626]
-module.security_group_schema_registry.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-045d1ea0ac28d9247]
-module.security_group_ksql.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-05432e29d43728cc5]
-module.security_group_ldap.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-00f4211aad6aba707]
-module.security_group_zookeeper.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-09008d708bf4d95f9]
-module.security_group_kafka_connect.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0c818415a935f7e2b]
-module.security_group_kafka_rest.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0b59afb0c9bdc4f19]
-module.vpc.aws_cloudwatch_log_group.flow_log[0]: Refreshing state... [id=/aws/vpc-flow-log/vpc-0005d342cd992b30f]
-module.security_group_kafka.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-01719a283d0afb712]
-module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-06426bae0f24d2051]
-module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0da368cd17d8f3f7a]
-module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0b61c1e3969435578]
-module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0a41a250739374de2]
-module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-0783933df21e066e7]
-module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-075912f3f5be5850f]
-module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0c98882b20c7fd406]
-module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0a33a717464ace1d1]
-module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0c529263f478b46ac]
-module.security_group_ksql.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-4174608261]
-module.security_group_ksql.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-666066445]
-module.security_group_control_center.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-2441193045]
-module.security_group_control_center.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-3806736359]
-module.security_group_control_center.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-2439532092]
-module.security_group_control_center.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-3014404611]
-module.security_group_ksql.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-2104498115]
-module.security_group_ksql.aws_security_group_rule.ingress_with_cidr_blocks[2]: Refreshing state... [id=sgrule-3711502918]
-module.security_group_ksql.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-441088791]
-module.security_group_schema_registry.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-641784143]
-module.security_group_ldap.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-3171458658]
-module.security_group_ldap.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-4195066961]
-module.security_group_ldap.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-1753667497]
-module.security_group_schema_registry.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-769582867]
-module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[2]: Refreshing state... [id=sgrule-2796833043]
-module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-2899684832]
-module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[3]: Refreshing state... [id=sgrule-2693646471]
-module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-3534118695]
-module.security_group_ldap.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-1583476450]
-module.security_group_ldap.aws_security_group_rule.ingress_rules[1]: Refreshing state... [id=sgrule-1650255545]
-module.security_group_ldap.aws_security_group_rule.ingress_rules[2]: Refreshing state... [id=sgrule-346214237]
-module.security_group_kafka_connect.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-3577712021]
-module.security_group_kafka_connect.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-54540292]
-module.security_group_kafka_connect.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-2855978685]
-module.security_group_kafka_connect.aws_security_group_rule.ingress_with_cidr_blocks[2]: Refreshing state... [id=sgrule-2417261359]
-module.security_group_zookeeper.aws_security_group_rule.ingress_rules[2]: Refreshing state... [id=sgrule-3884935907]
-module.security_group_zookeeper.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-1536141147]
-module.security_group_zookeeper.aws_security_group_rule.ingress_rules[1]: Refreshing state... [id=sgrule-1570751859]
-module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[5]: Refreshing state... [id=sgrule-1318155238]
-module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-3721152786]
-module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-1018404249]
-module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[2]: Refreshing state... [id=sgrule-1076717759]
-module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[3]: Refreshing state... [id=sgrule-128508077]
-module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[4]: Refreshing state... [id=sgrule-3798897366]
-module.security_group_kafka_connect.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-57876434]
-module.security_group_kafka_rest.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-3346875972]
-module.security_group_kafka_rest.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-285645753]
-module.security_group_kafka_rest.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-1400946585]
-module.security_group_kafka_rest.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-1854500730]
-module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0f5326b6fb5c4d5ca]
-module.security_group_zookeeper.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-3038522452]
-module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-034e8852fa9dd7852]
-module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-0f6b518feab43659e]
-module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-02be129b6b3b63812]
-module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-0ef592ab74f63adfe]
-module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-00c7500a3d48b1cf3]
-module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0a33a717464ace1d11080289494]
-module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0dc35ee7fc044e9d5]
-module.control_center.aws_instance.this[0]: Refreshing state... [id=i-099f1d4fe65372077]
-module.security_group_kafka.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-3764147211]
-module.kafka_connect.aws_instance.this[0]: Refreshing state... [id=i-00c551f3de5f24711]
-module.ksql[0].aws_instance.this[0]: Refreshing state... [id=i-0d594c02edb5ed89f]
-module.kafka_rest.aws_instance.this[0]: Refreshing state... [id=i-0426c154c1449d568]
-module.schema_regitry.aws_instance.this[0]: Refreshing state... [id=i-040f78c6d99f6dce0]
-module.security_group_kafka.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-3841620194]
-module.security_group_kafka.aws_security_group_rule.ingress_rules[2]: Refreshing state... [id=sgrule-1098706378]
-module.security_group_kafka.aws_security_group_rule.ingress_rules[3]: Refreshing state... [id=sgrule-272636478]
-module.security_group_kafka.aws_security_group_rule.ingress_rules[1]: Refreshing state... [id=sgrule-2270878692]
-module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[3]: Refreshing state... [id=sgrule-3725294353]
-module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[4]: Refreshing state... [id=sgrule-3071030337]
-module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[1]: Refreshing state... [id=sgrule-3347436614]
-module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-653918413]
-module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[5]: Refreshing state... [id=sgrule-2353320198]
-module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[2]: Refreshing state... [id=sgrule-2290468505]
-module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0c98882b20c7fd4061080289494]
-module.vpc.aws_iam_role_policy_attachment.vpc_flow_log_cloudwatch[0]: Refreshing state... [id=vpc-flow-log-role-20220923144713809700000002-20220923144715160900000003]
-module.zookeeper["zk-0"].aws_instance.this[0]: Refreshing state... [id=i-00742253e4913ddb8]
-module.vpc.aws_flow_log.this[0]: Refreshing state... [id=fl-0e515a3fd675e50af]
-module.kafka["kafka-0"].aws_instance.this[0]: Refreshing state... [id=i-00d365676ad0f219d]
-
-Note: Objects have changed outside of Terraform
-
-Terraform detected the following changes made outside of Terraform since the
-last "terraform apply" which may have affected this plan:
-
-  # module.control_center.aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-099f1d4fe65372077"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "control_center"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-  # module.kafka["kafka-0"].aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-00d365676ad0f219d"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "kafka-0"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-  # module.kafka_connect.aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-00c551f3de5f24711"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "kafka_connect"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-  # module.kafka_rest.aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-0426c154c1449d568"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "kafka_rest"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-  # module.ksql[0].aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-0d594c02edb5ed89f"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "ksql"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-  # module.schema_regitry.aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-040f78c6d99f6dce0"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "schema_registry"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-  # module.zookeeper["zk-0"].aws_instance.this[0] has changed
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-00742253e4913ddb8"
-        tags                                 = {
-            "Environment" = "staging"
-            "Name"        = "zk-0"
-            "Owner"       = "confluent user"
-        }
-      ~ tags_all                             = {
-          + "owner_email" = "gnasri"
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
-    }
-
-
-Unless you have made equivalent changes to your configuration, or ignored the
-relevant attributes using ignore_changes, the following plan may include
-actions to undo or respond to these changes.
-
-─────────────────────────────────────────────────────────────────────────────
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
-  ~ update in-place
+  + create
 
 Terraform will perform the following actions:
 
-  # module.control_center.aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-099f1d4fe65372077"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
-        }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
-        }
-        # (31 unchanged attributes hidden)
-
-        # (8 unchanged blocks hidden)
+  # random_shuffle.az will be created
+  + resource "random_shuffle" "az" {
+      + id           = (known after apply)
+      + input        = [
+          + "eu-west-3a",
+          + "eu-west-3c",
+          + "eu-west-3b",
+        ]
+      + result       = (known after apply)
+      + result_count = 1
     }
 
-  # module.kafka["kafka-0"].aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-00d365676ad0f219d"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+  # module.control_center.aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3b"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "control_center"
+          + "Owner"       = "confluent user"
         }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "control_center"
+          + "Owner"       = "confluent user"
         }
-        # (31 unchanged attributes hidden)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
 
-        # (8 unchanged blocks hidden)
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + timeouts {}
     }
 
-  # module.kafka_connect.aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-00c551f3de5f24711"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+  # module.kafka["kafka-0"].aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3a"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "kafka-0"
+          + "Owner"       = "confluent user"
         }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "kafka-0"
+          + "Owner"       = "confluent user"
         }
-        # (31 unchanged attributes hidden)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
 
-        # (8 unchanged blocks hidden)
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = false
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = {
+              + "Name" = "kafka-0"
+            }
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = "gp2"
+        }
+
+      + timeouts {}
     }
 
-  # module.kafka_rest.aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-0426c154c1449d568"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+  # module.kafka_connect.aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3b"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "kafka_connect"
+          + "Owner"       = "confluent user"
         }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "kafka_connect"
+          + "Owner"       = "confluent user"
         }
-        # (31 unchanged attributes hidden)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
 
-        # (8 unchanged blocks hidden)
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + timeouts {}
     }
 
-  # module.ksql[0].aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-0d594c02edb5ed89f"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+  # module.kafka_rest.aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3b"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "kafka_rest"
+          + "Owner"       = "confluent user"
         }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "kafka_rest"
+          + "Owner"       = "confluent user"
         }
-        # (31 unchanged attributes hidden)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
 
-        # (8 unchanged blocks hidden)
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + timeouts {}
     }
 
-  # module.schema_regitry.aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-040f78c6d99f6dce0"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+  # module.ksql[0].aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3a"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "ksql"
+          + "Owner"       = "confluent user"
         }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "ksql"
+          + "Owner"       = "confluent user"
         }
-        # (31 unchanged attributes hidden)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
 
-        # (8 unchanged blocks hidden)
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = true
+          + device_name           = (known after apply)
+          + encrypted             = true
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = {
+              + "Name" = "ksql-0-root-block"
+            }
+          + throughput            = 200
+          + volume_id             = (known after apply)
+          + volume_size           = 10
+          + volume_type           = "gp3"
+        }
+
+      + timeouts {}
     }
 
-  # module.zookeeper["zk-0"].aws_instance.this[0] will be updated in-place
-  ~ resource "aws_instance" "this" {
-        id                                   = "i-00742253e4913ddb8"
-      ~ tags                                 = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+  # module.schema_regitry.aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3b"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "schema_registry"
+          + "Owner"       = "confluent user"
         }
-      ~ tags_all                             = {
-          - "owner_email" = "gnasri" -> null
-            # (3 unchanged elements hidden)
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "schema_registry"
+          + "Owner"       = "confluent user"
         }
-        # (31 unchanged attributes hidden)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
 
-        # (8 unchanged blocks hidden)
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = true
+          + device_name           = (known after apply)
+          + encrypted             = true
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = {
+              + "Name" = "schema_registry-root-block"
+            }
+          + throughput            = 200
+          + volume_id             = (known after apply)
+          + volume_size           = 10
+          + volume_type           = "gp3"
+        }
+
+      + timeouts {}
     }
 
-Plan: 0 to add, 7 to change, 0 to destroy.
+  # module.security_group_control_center.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group control center"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "sg_control_center-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_control_center.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_control_center.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_control_center.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "REST API"
+      + from_port                = 9021
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9021
+      + type                     = "ingress"
+    }
+
+  # module.security_group_control_center.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+        ]
+      + description              = "REST API"
+      + from_port                = 9021
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9021
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group for example usage with EC2 instance"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "staging-kafka-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_rules[1] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "Kafka PLAINTEXT enable broker 0.8.2+"
+      + from_port                = 9092
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9092
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_rules[2] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "Kafka TLS enabled broker 0.8.2+"
+      + from_port                = 9094
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9094
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_rules[3] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "Kafka JMX Exporter"
+      + from_port                = 11001
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 11001
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Inter-broker listener"
+      + from_port                = 9091
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9091
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "kafka default external plaintext listener"
+      + from_port                = 9092
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9092
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[2] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Metadata Service (MDS)/Confluent Server REST API"
+      + from_port                = 8090
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8090
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[3] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "kafka TLS listener"
+      + from_port                = 9094
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9094
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[4] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "kafka JMX exporter"
+      + from_port                = 11001
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 11001
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka.aws_security_group_rule.ingress_with_cidr_blocks[5] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "kafka JMX exporter"
+      + from_port                = 11002
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 11002
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_connect.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group kafka connect"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "sg_connect-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_kafka_connect.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_kafka_connect.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_connect.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "REST API"
+      + from_port                = 8083
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8083
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_connect.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+        ]
+      + description              = "REST API"
+      + from_port                = 8083
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8083
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_connect.aws_security_group_rule.ingress_with_cidr_blocks[2] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Jolokia"
+      + from_port                = 7773
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 7773
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_rest.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group REST proxy"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "sg_rest_proxy-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_kafka_rest.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_kafka_rest.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_rest.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "REST Proxy"
+      + from_port                = 8082
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8082
+      + type                     = "ingress"
+    }
+
+  # module.security_group_kafka_rest.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+        ]
+      + description              = "REST Proxy"
+      + from_port                = 8081
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8081
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ksql.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group KSQL"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "sg_ksql-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_ksql.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_ksql.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ksql.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "REST API"
+      + from_port                = 8088
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8088
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ksql.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+        ]
+      + description              = "REST API"
+      + from_port                = 8088
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8088
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ksql.aws_security_group_rule.ingress_with_cidr_blocks[2] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Jolokia"
+      + from_port                = 7774
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 7774
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ldap.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group for ldap server"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "staging-kafka-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_ldap.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_ldap.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ldap.aws_security_group_rule.ingress_rules[1] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "LDAP"
+      + from_port                = 389
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 389
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ldap.aws_security_group_rule.ingress_rules[2] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "LDAPS"
+      + from_port                = 636
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 636
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ldap.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "ldap"
+      + from_port                = 389
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 389
+      + type                     = "ingress"
+    }
+
+  # module.security_group_ldap.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "ldaps"
+      + from_port                = 636
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 636
+      + type                     = "ingress"
+    }
+
+  # module.security_group_schema_registry.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group schema registry"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "sg_schema_registry-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_schema_registry.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_schema_registry.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "schema registry REST API"
+      + from_port                = 8081
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8081
+      + type                     = "ingress"
+    }
+
+  # module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+        ]
+      + description              = "schema registry REST API"
+      + from_port                = 8081
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8081
+      + type                     = "ingress"
+    }
+
+  # module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[2] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "zookeeper-2888-tcp"
+      + from_port                = 2888
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 2888
+      + type                     = "ingress"
+    }
+
+  # module.security_group_schema_registry.aws_security_group_rule.ingress_with_cidr_blocks[3] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Jolokia"
+      + from_port                = 7772
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 7772
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Security group for example usage with EC2 instance"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "staging-kafka-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.egress_rules[0] will be created
+  + resource "aws_security_group_rule" "egress_rules" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "All protocols"
+      + from_port                = -1
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = [
+          + "::/0",
+        ]
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = -1
+      + type                     = "egress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_rules[0] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "SSH"
+      + from_port                = 22
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 22
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_rules[1] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "Zookeeper"
+      + from_port                = 2181
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 2181
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_rules[2] will be created
+  + resource "aws_security_group_rule" "ingress_rules" {
+      + cidr_blocks              = [
+          + "13.37.12.102/32",
+          + "0.0.0.0/0",
+        ]
+      + description              = "JMX"
+      + from_port                = 7199
+      + id                       = (known after apply)
+      + ipv6_cidr_blocks         = []
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 7199
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "zookeeper console"
+      + from_port                = 2181
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 2181
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[1] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Client access via TLS"
+      + from_port                = 2182
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 2182
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[2] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "zookeeper-2888-tcp"
+      + from_port                = 2888
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 2888
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[3] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "zookeeper console"
+      + from_port                = 3888
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 3888
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[4] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "zookeeper JMX"
+      + from_port                = 7199
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 7199
+      + type                     = "ingress"
+    }
+
+  # module.security_group_zookeeper.aws_security_group_rule.ingress_with_cidr_blocks[5] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.4.0.0/16",
+        ]
+      + description              = "Jolokia"
+      + from_port                = 7770
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 7770
+      + type                     = "ingress"
+    }
+
+  # module.vpc.aws_cloudwatch_log_group.flow_log[0] will be created
+  + resource "aws_cloudwatch_log_group" "flow_log" {
+      + arn               = (known after apply)
+      + id                = (known after apply)
+      + name              = (known after apply)
+      + retention_in_days = 0
+      + tags              = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all          = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+    }
+
+  # module.vpc.aws_default_network_acl.this[0] will be created
+  + resource "aws_default_network_acl" "this" {
+      + arn                    = (known after apply)
+      + default_network_acl_id = (known after apply)
+      + id                     = (known after apply)
+      + owner_id               = (known after apply)
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka-default"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka-default"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + egress {
+          + action          = "allow"
+          + from_port       = 0
+          + ipv6_cidr_block = "::/0"
+          + protocol        = "-1"
+          + rule_no         = 101
+          + to_port         = 0
+        }
+      + egress {
+          + action     = "allow"
+          + cidr_block = "0.0.0.0/0"
+          + from_port  = 0
+          + protocol   = "-1"
+          + rule_no    = 100
+          + to_port    = 0
+        }
+
+      + ingress {
+          + action          = "allow"
+          + from_port       = 0
+          + ipv6_cidr_block = "::/0"
+          + protocol        = "-1"
+          + rule_no         = 101
+          + to_port         = 0
+        }
+      + ingress {
+          + action     = "allow"
+          + cidr_block = "0.0.0.0/0"
+          + from_port  = 0
+          + protocol   = "-1"
+          + rule_no    = 100
+          + to_port    = 0
+        }
+    }
+
+  # module.vpc.aws_default_route_table.default[0] will be created
+  + resource "aws_default_route_table" "default" {
+      + arn                    = (known after apply)
+      + default_route_table_id = (known after apply)
+      + id                     = (known after apply)
+      + owner_id               = (known after apply)
+      + route                  = (known after apply)
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka-default"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka-default"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "5m"
+          + update = "5m"
+        }
+    }
+
+  # module.vpc.aws_default_security_group.this[0] will be created
+  + resource "aws_default_security_group" "this" {
+      + arn                    = (known after apply)
+      + description            = (known after apply)
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka-default"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all               = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka-default"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # module.vpc.aws_eip.nat[0] will be created
+  + resource "aws_eip" "nat" {
+      + allocation_id        = (known after apply)
+      + association_id       = (known after apply)
+      + carrier_ip           = (known after apply)
+      + customer_owned_ip    = (known after apply)
+      + domain               = (known after apply)
+      + id                   = (known after apply)
+      + instance             = (known after apply)
+      + network_border_group = (known after apply)
+      + network_interface    = (known after apply)
+      + private_dns          = (known after apply)
+      + private_ip           = (known after apply)
+      + public_dns           = (known after apply)
+      + public_ip            = (known after apply)
+      + public_ipv4_pool     = (known after apply)
+      + tags                 = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all             = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc                  = true
+    }
+
+  # module.vpc.aws_flow_log.this[0] will be created
+  + resource "aws_flow_log" "this" {
+      + arn                      = (known after apply)
+      + iam_role_arn             = (known after apply)
+      + id                       = (known after apply)
+      + log_destination          = (known after apply)
+      + log_destination_type     = "cloud-watch-logs"
+      + log_format               = (known after apply)
+      + log_group_name           = (known after apply)
+      + max_aggregation_interval = 60
+      + tags                     = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                 = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + traffic_type             = "ALL"
+      + vpc_id                   = (known after apply)
+    }
+
+  # module.vpc.aws_iam_policy.vpc_flow_log_cloudwatch[0] will be created
+  + resource "aws_iam_policy" "vpc_flow_log_cloudwatch" {
+      + arn         = (known after apply)
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + name_prefix = "vpc-flow-log-to-cloudwatch-"
+      + path        = "/"
+      + policy      = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action   = [
+                          + "logs:PutLogEvents",
+                          + "logs:DescribeLogStreams",
+                          + "logs:DescribeLogGroups",
+                          + "logs:CreateLogStream",
+                        ]
+                      + Effect   = "Allow"
+                      + Resource = "*"
+                      + Sid      = "AWSVPCFlowLogsPushToCloudWatch"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + policy_id   = (known after apply)
+      + tags        = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all    = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+    }
+
+  # module.vpc.aws_iam_role.vpc_flow_log_cloudwatch[0] will be created
+  + resource "aws_iam_role" "vpc_flow_log_cloudwatch" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "vpc-flow-logs.amazonaws.com"
+                        }
+                      + Sid       = "AWSVPCFlowLogsAssumeRole"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "vpc-flow-log-role-"
+      + path                  = "/"
+      + tags                  = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all              = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy {
+          + name   = (known after apply)
+          + policy = (known after apply)
+        }
+    }
+
+  # module.vpc.aws_iam_role_policy_attachment.vpc_flow_log_cloudwatch[0] will be created
+  + resource "aws_iam_role_policy_attachment" "vpc_flow_log_cloudwatch" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = (known after apply)
+    }
+
+  # module.vpc.aws_internet_gateway.this[0] will be created
+  + resource "aws_internet_gateway" "this" {
+      + arn      = (known after apply)
+      + id       = (known after apply)
+      + owner_id = (known after apply)
+      + tags     = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id   = (known after apply)
+    }
+
+  # module.vpc.aws_nat_gateway.this[0] will be created
+  + resource "aws_nat_gateway" "this" {
+      + allocation_id        = (known after apply)
+      + connectivity_type    = "public"
+      + id                   = (known after apply)
+      + network_interface_id = (known after apply)
+      + private_ip           = (known after apply)
+      + public_ip            = (known after apply)
+      + subnet_id            = (known after apply)
+      + tags                 = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all             = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+    }
+
+  # module.vpc.aws_route.private_nat_gateway[0] will be created
+  + resource "aws_route" "private_nat_gateway" {
+      + destination_cidr_block = "0.0.0.0/0"
+      + id                     = (known after apply)
+      + instance_id            = (known after apply)
+      + instance_owner_id      = (known after apply)
+      + nat_gateway_id         = (known after apply)
+      + network_interface_id   = (known after apply)
+      + origin                 = (known after apply)
+      + route_table_id         = (known after apply)
+      + state                  = (known after apply)
+
+      + timeouts {
+          + create = "5m"
+        }
+    }
+
+  # module.vpc.aws_route.public_internet_gateway[0] will be created
+  + resource "aws_route" "public_internet_gateway" {
+      + destination_cidr_block = "0.0.0.0/0"
+      + gateway_id             = (known after apply)
+      + id                     = (known after apply)
+      + instance_id            = (known after apply)
+      + instance_owner_id      = (known after apply)
+      + network_interface_id   = (known after apply)
+      + origin                 = (known after apply)
+      + route_table_id         = (known after apply)
+      + state                  = (known after apply)
+
+      + timeouts {
+          + create = "5m"
+        }
+    }
+
+  # module.vpc.aws_route_table.private[0] will be created
+  + resource "aws_route_table" "private" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags             = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all         = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table.public[0] will be created
+  + resource "aws_route_table" "public" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags             = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all         = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private[0] will be created
+  + resource "aws_route_table_association" "private" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private[1] will be created
+  + resource "aws_route_table_association" "private" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private[2] will be created
+  + resource "aws_route_table_association" "private" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.public[0] will be created
+  + resource "aws_route_table_association" "public" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.public[1] will be created
+  + resource "aws_route_table_association" "public" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.public[2] will be created
+  + resource "aws_route_table_association" "public" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private[0] will be created
+  + resource "aws_subnet" "private" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "eu-west-3a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.4.1.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                                       = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private[1] will be created
+  + resource "aws_subnet" "private" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "eu-west-3b"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.4.2.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                                       = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private[2] will be created
+  + resource "aws_subnet" "private" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "eu-west-3c"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.4.3.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                                       = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.public[0] will be created
+  + resource "aws_subnet" "public" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "eu-west-3a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.4.11.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                                       = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.public[1] will be created
+  + resource "aws_subnet" "public" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "eu-west-3b"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.4.12.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                                       = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.public[2] will be created
+  + resource "aws_subnet" "public" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "eu-west-3c"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.4.13.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                                       = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_vpc.this[0] will be created
+  + resource "aws_vpc" "this" {
+      + arn                                  = (known after apply)
+      + assign_generated_ipv6_cidr_block     = false
+      + cidr_block                           = "10.4.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_classiclink                   = (known after apply)
+      + enable_classiclink_dns_support       = (known after apply)
+      + enable_dns_hostnames                 = true
+      + enable_dns_support                   = true
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "staging-kafka"
+          + "Owner"       = "confluent user"
+        }
+    }
+
+  # module.zookeeper["zk-0"].aws_instance.this[0] will be created
+  + resource "aws_instance" "this" {
+      + ami                                  = "ami-0f7559f51d3a22167"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = "eu-west-3a"
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.large"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gnasri"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Environment" = "staging"
+          + "Name"        = "zk-0"
+          + "Owner"       = "confluent user"
+        }
+      + tags_all                             = {
+          + "Environment" = "staging"
+          + "Name"        = "zk-0"
+          + "Owner"       = "confluent user"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = "IyEvYmluL2Jhc2ggLXhlCmV4ZWMgPiA+KHRlZSAvdmFyL2xvZy91c2VyLWRhdGEubG9nfGxvZ2dlciAtdCB1c2VyLWRhdGEgLXMgMj4vZGV2L2NvbnNvbGUpIDI+JjEKI2FwdCB1cGRhdGUgJiYgYXB0IHVwZ3JhZGUgLXkKYXB0IHVwZGF0ZSAteQojaW5zdGFsbCBqZGsgMTEKYXB0LWdldCBpbnN0YWxsIC15IG9wZW5qZGstMTEtanJlLWhlYWRsZXNzCiNBZGQgY29uZmx1ZW50IHJlcG9zaXRvcnkgdG8gYXB0IAojd2dldCAtcU8gLSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yL2FyY2hpdmUua2V5IHwgYXB0LWtleSBhZGQgLQojYWRkLWFwdC1yZXBvc2l0b3J5IC15IFwKIyAgICAiZGViIFthcmNoPWFtZDY0XSBodHRwczovL3BhY2thZ2VzLmNvbmZsdWVudC5pby9kZWIvNy4yIHN0YWJsZSBtYWluIiAmJiBcCiMgICAgYXB0LWdldCB1cGRhdGUgLXkKI2luc3RhbGwgY29uZmx1ZW50IHBsYXRmb3JtCQojYXB0LWdldCBpbnN0YWxsIC15IFwKIyAgICBjb25mbHVlbnQtcGxhdGZvcm0gXAojICAgIGNvbmZsdWVudC1zZWN1cml0eQoKI2luc3RhbGwgcHl0aG9uIDMKYWRkLWFwdC1yZXBvc2l0b3J5IC15IHBwYTpkZWFkc25ha2VzL3BwYQkKYXB0LWdldCB1cGRhdGUgLXkKYXB0LWdldCBpbnN0YWxsIHB5dGhvbjMuOCAteQojaW5zdGFsbCBwaXAKY3VybCBodHRwczovL2Jvb3RzdHJhcC5weXBhLmlvL2dldC1waXAucHkgLW8gZ2V0LXBpcC5weQojaW5zdGFsbCBhbnNpYmxlIDIuMTEKcHl0aG9uMyAtbSBwaXAgaW5zdGFsbCAtLXVzZXIgYW5zaWJsZS1jb3JlPT0yLjEx"
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + credit_specification {}
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_put_response_hop_limit = 1
+          + http_tokens                 = "optional"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = false
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = {
+              + "Name" = "zk-0"
+            }
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = "gp2"
+        }
+
+      + timeouts {}
+    }
+
+Plan: 95 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
-  ~ resource-ids = <<-EOT
-        all:
-          vars:
-            ansible_connection: ssh
-            ansible_user: ubuntu
-            ansible_become: true
-            ansible_ssh_private_key_file: ~/.ssh/id_rsa
-            validate_hosts: false
-            confluent_common_repository_debian_release_version: focal
-            #Enable JMX Exporter
-            jmxexporter_enabled: true
-            env: aws
-      - ldap_server:
-      -   hosts:  
-      -     
-      -       ansible_user: centos
-      + 
-        zookeeper:
-          hosts:
-            
-            ip-10-4-11-49.eu-west-3.compute.internal:
-              ansible_host: ec2-15-237-49-249.eu-west-3.compute.amazonaws.com
-            
-        kafka_broker:
-          hosts:
-            
-      -     "\t"ip-10-4-11-200.eu-west-3.compute.internal:
-      +     ip-10-4-11-200.eu-west-3.compute.internal:
-              ansible_host: ec2-35-181-6-1.eu-west-3.compute.amazonaws.com
-              kafka_broker_custom_properties:
-                broker.rack: eu-west-3a
-            
-        schema_registry:
-          hosts:
-            ip-10-4-12-214.eu-west-3.compute.internal:
-              ansible_host: ec2-52-47-120-50.eu-west-3.compute.amazonaws.com
-        kafka_rest:
-          hosts:
-            ip-10-4-12-54.eu-west-3.compute.internal:
-              ansible_host: ec2-15-188-79-35.eu-west-3.compute.amazonaws.com
-        ksql:
-          hosts:
-            
-            ip-10-4-11-210.eu-west-3.compute.internal:
-              ansible_host: ec2-15-236-226-71.eu-west-3.compute.amazonaws.com
-              
-        kafka_connect:
-          hosts:
-            ip-10-4-12-222.eu-west-3.compute.internal:
-              ansible_host: ec2-35-180-133-174.eu-west-3.compute.amazonaws.com
-        control_center:
-          hosts:
-            ip-10-4-12-78.eu-west-3.compute.internal:
-              ansible_host: ec2-15-188-89-102.eu-west-3.compute.amazonaws.com
-    EOT
-
-Warning: Argument is deprecated
-
-  with module.vpc.aws_vpc.this,
-  on .terraform/modules/vpc/main.tf line 27, in resource "aws_vpc" "this":
-  27:   enable_classiclink               = var.enable_classiclink
-
-With the retirement of EC2-Classic the enable_classiclink attribute has been deprecated and will be removed in a future version.
-
-(and one more similar warning elsewhere)
+  + kafka        = {
+      + kafka-0 = {
+          + arn                                = (known after apply)
+          + capacity_reservation_specification = (known after apply)
+          + id                                 = (known after apply)
+          + instance_state                     = (known after apply)
+          + ipv6_addresses                     = (known after apply)
+          + outpost_arn                        = (known after apply)
+          + password_data                      = (known after apply)
+          + primary_network_interface_id       = (known after apply)
+          + private_dns                        = (known after apply)
+          + private_ip                         = (known after apply)
+          + public_dns                         = (known after apply)
+          + public_ip                          = (known after apply)
+          + spot_bid_status                    = ""
+          + spot_instance_id                   = ""
+          + spot_request_state                 = ""
+          + tags_all                           = {
+              + "Environment" = "staging"
+              + "Name"        = "kafka-0"
+              + "Owner"       = "confluent user"
+            }
+        }
+    }
+  + my_public_ip = "13.37.12.102"
+  + resource-ids = (known after apply)
+  + zookeeper    = {
+      + zk-0 = {
+          + arn                                = (known after apply)
+          + capacity_reservation_specification = (known after apply)
+          + id                                 = (known after apply)
+          + instance_state                     = (known after apply)
+          + ipv6_addresses                     = (known after apply)
+          + outpost_arn                        = (known after apply)
+          + password_data                      = (known after apply)
+          + primary_network_interface_id       = (known after apply)
+          + private_dns                        = (known after apply)
+          + private_ip                         = (known after apply)
+          + public_dns                         = (known after apply)
+          + public_ip                          = (known after apply)
+          + spot_bid_status                    = ""
+          + spot_instance_id                   = ""
+          + spot_request_state                 = ""
+          + tags_all                           = {
+              + "Environment" = "staging"
+              + "Name"        = "zk-0"
+              + "Owner"       = "confluent user"
+            }
+        }
+    }
 
 ─────────────────────────────────────────────────────────────────────────────
 

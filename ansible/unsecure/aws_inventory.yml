@@ -8,41 +8,42 @@ all:
     confluent_common_repository_debian_release_version: focal
     #Enable JMX Exporter
     jmxexporter_enabled: true
+    jolokia_enabled: true
     env: aws
 
 zookeeper:
   hosts:
     
-    ip-10-4-11-49.eu-west-3.compute.internal:
-      ansible_host: ec2-15-237-49-249.eu-west-3.compute.amazonaws.com
+    ip-10-4-11-119.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-24-239.eu-west-3.compute.amazonaws.com
     
 kafka_broker:
   hosts:
     
-    ip-10-4-11-200.eu-west-3.compute.internal:
-      ansible_host: ec2-35-181-6-1.eu-west-3.compute.amazonaws.com
+    ip-10-4-11-209.eu-west-3.compute.internal:
+      ansible_host: ec2-15-188-27-250.eu-west-3.compute.amazonaws.com
       kafka_broker_custom_properties:
         broker.rack: eu-west-3a
     
 schema_registry:
   hosts:
-    ip-10-4-12-214.eu-west-3.compute.internal:
-      ansible_host: ec2-52-47-120-50.eu-west-3.compute.amazonaws.com
+    ip-10-4-12-32.eu-west-3.compute.internal:
+      ansible_host: ec2-13-38-48-35.eu-west-3.compute.amazonaws.com
 kafka_rest:
   hosts:
-    ip-10-4-12-54.eu-west-3.compute.internal:
-      ansible_host: ec2-15-188-79-35.eu-west-3.compute.amazonaws.com
+    ip-10-4-12-185.eu-west-3.compute.internal:
+      ansible_host: ec2-15-237-58-16.eu-west-3.compute.amazonaws.com
 ksql:
   hosts:
     
-    ip-10-4-11-210.eu-west-3.compute.internal:
-      ansible_host: ec2-15-236-226-71.eu-west-3.compute.amazonaws.com
+    ip-10-4-11-221.eu-west-3.compute.internal:
+      ansible_host: ec2-15-236-43-181.eu-west-3.compute.amazonaws.com
       
 kafka_connect:
   hosts:
-    ip-10-4-12-222.eu-west-3.compute.internal:
-      ansible_host: ec2-35-180-133-174.eu-west-3.compute.amazonaws.com
+    ip-10-4-12-244.eu-west-3.compute.internal:
+      ansible_host: ec2-13-36-239-156.eu-west-3.compute.amazonaws.com
 control_center:
   hosts:
-    ip-10-4-12-78.eu-west-3.compute.internal:
-      ansible_host: ec2-15-188-89-102.eu-west-3.compute.amazonaws.com
+    ip-10-4-12-227.eu-west-3.compute.internal:
+      ansible_host: ec2-15-237-109-26.eu-west-3.compute.amazonaws.com

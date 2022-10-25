@@ -18,6 +18,7 @@ all:
     confluent_common_repository_debian_release_version: focal
     #Enable JMX Exporter
     jmxexporter_enabled: true
+    jolokia_enabled: true
     env: aws
 %{ for l in module.ldap_server }
 ldap_server:
